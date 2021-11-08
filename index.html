@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&family=Space+Mono:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/styles.css">
+
+        <script type="text/javascript" src="js/default-settings.js"></script>
+        <title>Pomodoro timer</title>
+    </head>
+    <body>
+        <div class="container">
+            <!--Header-->
+            <div class="logo">
+                <img src="images/logo.svg" alt="Pomodoro logo">
+            </div>
+            <!--Main menu-->
+            <div class="timer-menu">
+                <div id='pomodoro-menu-button' class="menu-button menu-button_active">
+                    pomodoro
+                </div>
+                <div id='sort-break-menu-button' class="menu-button">
+                    sort-break
+                </div>
+                <div id='long-break-menu-button' class="menu-button">
+                    long break
+                </div>
+            </div>
+            <!--Main timer-->
+            <div class="clock-container">
+                <div class="progress">
+                    <div class="progress__progress-background">
+                        <div id='progress' class="progress__active-semi-circle">
+                            <div class="progress__bar-rounding">
+
+                            </div>
+                        </div>
+                        <div id='left-cover' class="progress__left-background-cover">
+
+                        </div>
+                        <div id='right-cover' class="progress__right-background-cover">
+
+                        </div>
+                        <div class="timer">
+                            <div id='timer' class="timer__clock">
+                                30:00
+                            </div>
+                            <div class="timer__button">
+                                <span id='timer-button'>S&ensp;T&ensp;A&ensp;R&ensp;T</span>
+                            </div>
+                        </div>
+                        <div class="progress__top-point">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Settings button-->
+            <div class="settings-button">
+                <img id='settings-button' src="images/icon-settings.svg" alt="Settings button picture">
+            </div>
+            <!--Settings window-->
+            <div id='settings' class="settings-window">
+                <div class="settings-content">
+                    <div class="settings-content__header">
+                        <div class="settings-window__title">
+                            Settings
+                        </div>
+                        <div class="settings-content__close-button">
+                            <img id='settings-close-button' src="images/icon-close.svg" alt="Settings close button">
+                        </div>
+                    </div>
+                    <div class="settings-content__timers-settings">
+                        <div class="settings-content__timers-settings-title">
+                            T I M E ( M I N U T E S )
+                        </div>
+                        <div class="settings-content__timers-settings-container">
+                            <div class="timer-settings">
+                                <div class="timer-settings__title">
+                                    pomodoro
+                                </div>
+                                <div class="timer-settings__input">
+                                    <input id='pomodoro-settings' type="number" name="pomodoro" value="30">
+                                </div>
+                            </div>
+                            <div class="timer-settings">
+                                <div class="timer-settings__title">
+                                    sort break
+                                </div>
+                                <div class="timer-settings__input">
+                                    <input id='short-break-settings' type="number" name="sort-break" value="5">
+                                </div>
+                            </div>
+                            <div class="timer-settings">
+                                <div class="timer-settings__title">
+                                    long break
+                                </div>
+                                <div class="timer-settings__input">
+                                    <input id='long-break-settings' type="number" name="long break" value="15">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="settings-content__fons-settings">
+                        <div class="font-color-settings-container">
+                            <div class="font-color-settings-container__title">
+                                F O N T
+                            </div>
+                            <div class="font-color-settings-container__options">
+                                <div id='font-kumbh-sans' class="option font-color-settings-container__kumbh-sans active-font-option">
+                                    Aa
+                                </div>
+                                <div id='font-roboto-slab' class="option font-color-settings-container__roboto-slab">
+                                    Aa
+                                </div>
+                                <div id='font-space-mono' class="option font-color-settings-container__space-mono">
+                                    Aa
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings-content__colors-settings">
+                        <div class="font-color-settings-container">
+                            <div class="font-color-settings-container__title">
+                                C O L O R
+                            </div>
+                            <div class="font-color-settings-container__options">
+                                <div id='color-pink' class="option font-color-settings-container__pink active-color-option">
+
+                                </div>
+                                <div id='color-blue' class="option font-color-settings-container__blue">
+
+                                </div>
+                                <div id='color-purple' class="option font-color-settings-container__purple">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='apply-button' class="settings-content__apply-button">
+                        Apply
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/open-close-settings.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/timers.js"></script>
+</html>
