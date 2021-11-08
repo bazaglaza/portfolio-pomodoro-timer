@@ -1,4 +1,4 @@
-var DEFAULT_POMODORO_TIMER = 1 * 60; //The pomodoro timer value in seconds
+var DEFAULT_POMODORO_TIMER = 30 * 60; //The pomodoro timer value in seconds
 var DEFAULT_SHORT_BREAK_TIMER = 5 * 60; //The short break timer in seconds
 var DEFAULT_LONG_BREAK_TIMER = 15 * 60; // The long break timer in seconds
 
